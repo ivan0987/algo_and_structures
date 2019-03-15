@@ -7,10 +7,19 @@
 a = 32
 b = 127
 c = ""
+d = 0
 for i in range(b - (a - 1)):
-    c = c + str(a) + chr(a)
+    c = c + str(a) + chr(a) + ' '
     a += 1
+    d += 1
+    if d == 10:
+        print(c)
+        c = ''
+        d = 0
+        continue
+    else:
+        continue
+print(c)
 
-for j in range(len(c)):
     
 
