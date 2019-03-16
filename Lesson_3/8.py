@@ -4,3 +4,21 @@
 записывать ее в последнюю ячейку строки.
 В конце следует вывести полученную матрицу.
 """
+a = []
+b = []
+c = 0
+for i in range(4):
+    for j in range(4):
+        b.append(int(input('Введите очередное число: ')))
+    for k in b:
+        c += k
+    b.append(c)
+    c = 0
+    a.append(b)
+    b = []
+
+for i in a:
+    for j in i:
+        print(j, ' ', end='')
+    print()
+
